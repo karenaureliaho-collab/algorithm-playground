@@ -1,4 +1,4 @@
-# ⬡ AlgoForge — Algorithm Playground
+# || AlgoForge — Algorithm Playground ||
 
 An interactive browser-based algorithm learning playground. Write and run code, solve problems, and see visual explanations — all in one place.
 
@@ -55,6 +55,6 @@ algorithm-playground/
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 Pure HTML, CSS, and JavaScript — no frameworks, no build tools, no npm. Just open `index.html` in a browser and it works.
