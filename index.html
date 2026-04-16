@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoForge — Algorithm Playground</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">AlgoForge</span>
+      </div>
+      <nav class="algo-tabs" id="algoTabs">
+        <button class="tab-btn active" data-algo="greedy">Greedy</button>
+        <button class="tab-btn" data-algo="bfs">BFS</button>
+        <button class="tab-btn" data-algo="dfs">DFS</button>
+        <button class="tab-btn" data-algo="dp">DP</button>
+        <button class="tab-btn" data-algo="tree">Tree</button>
+        <button class="tab-btn" data-algo="sorting">Sorting</button>
+        <button class="tab-btn" data-algo="binary-search">Binary Search</button>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main class="playground">
+    <aside class="problem-panel" id="problemPanel">
+      <div class="panel-header">
+        <span class="panel-label">Problem</span>
+        <span class="difficulty-badge" id="diffBadge">Medium</span>
+      </div>
+      <h2 class="problem-title" id="problemTitle">Activity Selection</h2>
+      <p class="problem-desc" id="problemDesc"></p>
+      <div class="io-section">
+        <div class="io-block">
+          <span class="io-label">Input</span>
+          <pre class="io-pre" id="sampleInput"></pre>
+        </div>
+        <div class="io-block">
+          <span class="io-label">Expected Output</span>
+          <pre class="io-pre" id="sampleOutput"></pre>
+        </div>
+      </div>
+      <div class="hint-section" id="hintSection">
+        <button class="hint-btn" id="hintBtn">Show hint</button>
+        <p class="hint-text hidden" id="hintText"></p>
+      </div>
+      <div class="problem-nav">
+        <button class="nav-btn" id="prevProblem">← Prev</button>
+        <span class="problem-counter" id="problemCounter">1 / 3</span>
+        <button class="nav-btn" id="nextProblem">Next →</button>
+      </div>
+    </aside>
+
+    <section class="editor-panel">
+      <div class="editor-toolbar">
+        <select class="lang-select" id="langSelect">
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+        </select>
+        <div class="toolbar-right">
+          <button class="tool-btn" id="resetBtn" title="Reset code">↺ Reset</button>
+          <button class="tool-btn" id="solutionBtn" title="Show solution">⚡ Solution</button>
+          <button class="run-btn" id="runBtn">▶ Run</button>
+        </div>
+      </div>
+      <div class="editor-wrap">
+        <textarea class="code-editor" id="codeEditor" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+        <div class="line-numbers" id="lineNumbers"></div>
+      </div>
+    </section>
+
+    <section class="output-panel">
+      <div class="panel-header">
+        <span class="panel-label">Output</span>
+        <span class="status-dot" id="statusDot"></span>
+      </div>
+      <div class="visualizer-area" id="visualizerArea"></div>
+      <div class="output-console" id="outputConsole">
+        <span class="console-placeholder">Run your code to see output...</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="problems.js"></script>
+  <script src="visualizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
